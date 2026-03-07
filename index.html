@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirecting...</title>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const requestToken = params.get("request_token");
+
+    if (requestToken) {
+        window.location.href = "stockmind://zerodha?request_token=" + requestToken;
+    } else {
+        document.body.innerHTML = "Request token not found.";
+    }
+  </script>
+</head>
+<body>
+Redirecting to app...
+</body>
+</html>
